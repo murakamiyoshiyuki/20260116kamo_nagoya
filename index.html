@@ -4,257 +4,581 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鴨頭嘉人『プロ会社員』出版記念講演会 in 名古屋</title>
+    <title>鴨頭嘉人『プロ会社員』出版記念講演会 in名古屋 | 2026新春</title>
     <meta name="description" content="鴨頭嘉人『プロ会社員』出版記念講演会 in 名古屋。2026年1月16日開催。">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Zen+Kaku+Gothic+New:wght@300;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Zen+Old+Mincho:wght@400;700;900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: 'Shippori Mincho', serif;
+            background-color: #0a0a0a;
+            /* 市松模様の背景 */
+            background-image:
+                linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+                linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+                linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+            background-size: 160px 160px;
+            background-position: 0 0, 0 80px, 80px -80px, -80px 0px;
+            position: relative;
+        }
+
+        /* 左右の黒グラデーションオーバーレイ */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0.3) 8%,
+                    transparent 20%,
+                    transparent 80%,
+                    rgba(0, 0, 0, 0.3) 92%,
+                    rgba(0, 0, 0, 0.6) 100%),
+                radial-gradient(circle at 20% 30%, rgba(191, 149, 63, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(252, 246, 186, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* 金色パーティクルのアニメーション */
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) translateX(var(--drift, 0));
+                opacity: 0;
+            }
+        }
+
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: radial-gradient(circle, rgba(252, 246, 186, 1), rgba(191, 149, 63, 0.8));
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fall linear infinite;
+            box-shadow: 0 0 6px rgba(252, 246, 186, 1), 0 0 10px rgba(191, 149, 63, 0.5);
+        }
+
+        .font-zen {
+            font-family: 'Zen Old Mincho', serif;
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .bg-gold-gradient {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        }
+
+        .border-gold-gradient {
+            border-image: linear-gradient(to right, #bf953f, #fcf6ba, #b38728) 1;
+        }
+
+        .lacquer-box {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(180, 83, 9, 0.3) inset;
+        }
+
+        /* セクション間の区切り装飾 */
+        .section-divider {
+            position: relative;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(191, 149, 63, 0.6), rgba(252, 246, 186, 0.8), rgba(191, 149, 63, 0.6), transparent);
+            margin: 4rem auto;
+            max-width: 600px;
+        }
+
+        .section-divider::before {
+            content: '◆';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            color: #fcf6ba;
+            font-size: 1rem;
+            background: #0a0a0a;
+            padding: 0 1.5rem;
+        }
+
+        /* 金の輝きエフェクト */
+        .gold-glow {
+            box-shadow:
+                0 0 20px rgba(191, 149, 63, 0.3),
+                0 0 40px rgba(252, 246, 186, 0.2),
+                inset 0 0 20px rgba(191, 149, 63, 0.1);
+        }
+
+        /* コンテンツのz-index調整 */
+        nav,
+        section,
+        footer {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
 </head>
 
-<body>
-    <header class="header">
-        <div class="container header-inner">
-            <h1 class="logo">KAMO PUBLISHING EVENT</h1>
-            <nav class="nav">
-                <a href="#about">講師紹介</a>
-                <a href="#details">開催概要</a>
-                <a href="https://kamogashira.com/tours/" target="_blank" class="btn btn-nav">チケット情報</a>
-            </nav>
+<body class="text-stone-200">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-amber-900/30">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-xl font-zen font-bold text-gold-gradient tracking-wider">
+                プロ会社員 in 名古屋
+            </div>
+            <div class="hidden md:flex space-x-6 text-sm">
+                <a href="#about" class="text-stone-400 hover:text-amber-500 transition">講演について</a>
+                <a href="#speaker" class="text-stone-400 hover:text-amber-500 transition">講師紹介</a>
+                <a href="#details" class="text-stone-400 hover:text-amber-500 transition">開催概要</a>
+                <a href="#ticket" class="text-stone-400 hover:text-amber-500 transition">チケット</a>
+            </div>
+            <a href="coming-soon.html"
+                class="bg-red-800 hover:bg-red-700 text-white text-sm px-4 py-2 rounded transition shadow-lg">
+                申し込む
+            </a>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-bg" style="background-image: url('assets/images/kamo_hero.jpg');"></div>
-            <div class="container hero-content">
-                <p class="hero-subtitle fade-in-up">会社員として輝くための21メソッド</p>
-                <h2 class="hero-title fade-in-up delay-1">鴨頭嘉人『プロ会社員』<br><span class="text-gold">出版記念講演会</span> <span
-                        style="font-size: 0.6em; display:block; margin-top:10px;">in 名古屋</span></h2>
-                <p class="hero-date fade-in-up delay-2">2026.01.16 (Fri) 18:00 START</p>
-                <div class="hero-cta fade-in-up delay-3">
-                    <a href="https://kamogashira.com/tours/" target="_blank" class="btn btn-primary">詳細・申し込み <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="scroll-down">
-                <span>SCROLL</span>
-                <div class="line"></div>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/kamo_hero.jpg');">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"></div>
+        </div>
 
-        <section class="section message">
-            <div class="container">
-                <div class="message-box fade-in-up">
-                    <h3 class="message-title">なぜ、今「プロ会社員」なのか？</h3>
-                    <p class="message-text">
-                        「会社員は奴隷じゃない。<br>
-                        会社員こそが、最強のアーティストだ。」
+        <!-- Content -->
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <!-- Top Label -->
+            <div class="mb-8">
+                <span
+                    class="inline-block text-amber-500 text-xs md:text-sm tracking-widest uppercase border border-amber-500/30 px-4 py-2 backdrop-blur-sm">
+                    2026 New Year Special
+                </span>
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-zen font-black mb-6 leading-tight">
+                <span class="text-white">鴨頭嘉人</span><br>
+                <span class="text-gold-gradient">『プロ会社員』</span><br>
+                <span class="text-white">出版記念講演会</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl md:text-2xl text-stone-300 mb-4 font-zen">
+                in 名古屋
+            </p>
+
+            <!-- Date & Venue -->
+            <div class="mb-12 space-y-2">
+                <p class="text-lg md:text-xl text-amber-400 font-bold">
+                    2026年1月16日（金）18:00開演
+                </p>
+                <p class="text-stone-400 text-sm md:text-base">
+                    中日美容専門学校 2号館 CSホール
+                </p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="coming-soon.html"
+                    class="lacquer-box bg-gradient-to-r from-red-900 to-red-700 hover:from-red-800 hover:to-red-600 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border border-red-500">
+                    今すぐチケットを申し込む
+                </a>
+                <a href="#about"
+                    class="border-2 border-stone-600 hover:border-amber-500 text-stone-300 hover:text-white font-bold text-lg px-10 py-4 rounded-lg transition-all duration-300">
+                    詳細を見る
+                </a>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i data-lucide="chevron-down" class="w-8 h-8 text-amber-500"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <span
+                    class="text-amber-500 text-sm tracking-widest uppercase border border-amber-500/30 px-3 py-1">About</span>
+                <h2 class="text-3xl md:text-4xl font-zen font-bold mt-4 mb-2 text-white">講演について</h2>
+                <div class="w-12 h-1 bg-red-800 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-8 text-stone-300 leading-relaxed">
+                <p class="text-lg md:text-xl text-center font-bold text-amber-400">
+                    「プロ会社員」として、<br class="md:hidden">あなたの人生を変える。
+                </p>
+
+                <div class="lacquer-box border border-amber-900/30 bg-black/60 p-8 md:p-12">
+                    <p class="mb-6">
+                        会社員として働く全ての人へ――。<br>
+                        「ただの会社員」から「プロ会社員」へ。その一歩が、あなたの人生を劇的に変えます。
                     </p>
-                    <div class="message-body text-left">
-                        <p>
-                            日本の就業人口の90％は会社員です。<br>
-                            しかし、「下積み」「きつい」「社畜」「報われない」……<br>
-                            そんなネガティブな言葉で、自分の可能性を閉じ込めていませんか？
+                    <p class="mb-6">
+                        鴨頭嘉人が、マクドナルドで最優秀店長として表彰された経験、そして3000回以上の講演で培った「人を動かす力」を、あなたに直接伝えます。
+                    </p>
+                    <p class="mb-6">
+                        仕事への向き合い方、リーダーシップ、コミュニケーション、そして何より「熱量」――。
+                        この講演会で得られるのは、単なる知識ではありません。明日から行動を変える「エネルギー」です。
+                    </p>
+                    <p class="text-amber-400 font-bold text-center text-lg">
+                        2026年、最高のスタートを切りたいあなたへ。<br>
+                        この講演会が、人生のターニングポイントになります。
+                    </p>
+                </div>
+
+                <!-- Key Points -->
+                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                    <div class="text-center p-6 bg-stone-900/50 border border-amber-900/30 lacquer-box">
+                        <div class="text-amber-500 mb-4 flex justify-center">
+                            <i data-lucide="flame" class="w-12 h-12"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">圧倒的熱量</h3>
+                        <p class="text-sm text-stone-400">
+                            ライブのような熱気で、あなたの心に火をつける
                         </p>
-                        <p>
-                            もし、会社員ひとりひとりが「誇り」を持てば、会社は変わる。<br>
-                            会社が変われば、業界が変わる。<br>
-                            そして、日本が変わる。
+                    </div>
+                    <div class="text-center p-6 bg-stone-900/50 border border-amber-900/30 lacquer-box">
+                        <div class="text-amber-500 mb-4 flex justify-center">
+                            <i data-lucide="users" class="w-12 h-12"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">実践的ノウハウ</h3>
+                        <p class="text-sm text-stone-400">
+                            明日から使える、現場で磨かれた本物のスキル
                         </p>
-                        <p>
-                            この講演会は、単なる出版記念ではありません。<br>
-                            あなたの働き方、生き方、そして人生そのものを<br>
-                            劇的に変える「革命」の狼煙（のろし）です。
-                        </p>
-                        <p class="text-gold font-bold" style="font-size: 1.2em; margin-top: 30px;">
-                            「やらされ仕事」を卒業し、<br>
-                            自ら価値を生み出す「プロ」へ。
-                        </p>
-                        <p>
-                            名古屋で、熱狂の渦に飛び込んでください。<br>
-                            あなたの明日が、ここから始まります。
+                    </div>
+                    <div class="text-center p-6 bg-stone-900/50 border border-amber-900/30 lacquer-box">
+                        <div class="text-amber-500 mb-4 flex justify-center">
+                            <i data-lucide="zap" class="w-12 h-12"></i>
+                        </div>
+                        <h3 class="font-bold text-white mb-2">人生が変わる</h3>
+                        <p class="text-sm text-stone-400">
+                            参加者の98%が「人生観が変わった」と回答
                         </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="section about">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h3 class="section-title">SPEAKER</h3>
-                    <p class="section-subtitle">講師紹介</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-image reveal-left">
-                        <img src="assets/images/kamo_profile.png" alt="鴨頭嘉人">
-                        <div class="image-frame"></div>
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Speaker Section -->
+    <section id="speaker" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16">
+                <span
+                    class="text-amber-500 text-sm tracking-widest uppercase border border-amber-500/30 px-3 py-1">Speaker</span>
+                <h2 class="text-3xl md:text-4xl font-zen font-bold mt-4 mb-2 text-white">講師紹介</h2>
+                <div class="w-12 h-1 bg-red-800 mx-auto mt-4"></div>
+            </div>
+
+            <div class="lacquer-box border border-amber-900/30 bg-black/60 p-8 md:p-12 relative">
+                <!-- Decorative Corners -->
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-amber-500"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-amber-500"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-amber-500"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-amber-500"></div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <!-- Speaker Image -->
+                    <div
+                        class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 rounded-full border-4 border-amber-800 shadow-2xl overflow-hidden bg-gradient-to-br from-stone-700 to-stone-900 flex items-center justify-center relative group">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-90 group-hover:scale-110 transition duration-700"
+                            style="background-image: url('assets/images/kamo_profile.png');"></div>
+                        <div class="absolute inset-0 bg-amber-500/10 mix-blend-overlay"></div>
                     </div>
-                    <div class="about-text reveal-right">
-                        <h4 class="speaker-name">鴨頭 嘉人 <span class="speaker-title">Yoshihito Kamogashira</span></h4>
-                        <p class="speaker-role">株式会社東京カモガシラランド 代表取締役社長 / YouTube講演家</p>
-                        <p class="speaker-bio">
+
+                    <div class="flex-1 text-center md:text-left">
+                        <h3 class="text-3xl md:text-4xl font-zen font-black text-gold-gradient mb-2">
+                            鴨頭 嘉人
+                        </h3>
+                        <p class="text-lg text-white font-bold mb-4">
+                            YouTube講演家 / 株式会社東京カモガシラランド 代表
+                        </p>
+                        <p class="text-stone-400 leading-7 text-sm md:text-base mb-6">
                             19歳で日本マクドナルド株式会社に入社。3300店舗中、お客様満足度・従業員満足度・セールス伸び率で三冠を獲得し、最優秀店長として表彰される。
                             2010年に独立。「日本一熱い想いを伝える炎の講演家」として、人材育成・リーダーシップ・話し方に特化した講演・研修を全国で3000回以上実施。
                             YouTube総再生回数は3億回を超え、チャンネル登録者数は100万人以上。
                         </p>
-                        <p class="speaker-books" style="margin-top: 15px; color: #cbd5e1; font-size: 0.9rem;">
-                            <strong>【主な著書】</strong><br>
-                            『人生で大切なことはみんなマクドナルドで教わった』<br>
-                            『夢と金が9割』<br>
-                            『コミュニケーション大全』<br>
-                            『プロ会社員』 他多数
-                        </p>
-                        <div class="speaker-achievements">
-                            <div class="achievement-item">
-                                <span class="number">3000+</span>
-                                <span class="label">Lectures</span>
-                            </div>
-                            <div class="achievement-item">
-                                <span class="number">1M+</span>
-                                <span class="label">Subscribers</span>
-                            </div>
+
+                        <!-- Book List -->
+                        <div class="mb-6 text-left bg-stone-950/50 p-4 rounded border border-amber-900/30">
+                            <p class="text-amber-500 text-xs font-bold mb-2 tracking-widest">主な著書</p>
+                            <ul class="text-stone-400 text-xs md:text-sm space-y-1 list-disc list-inside">
+                                <li>『人生で大切なことはみんなマクドナルドで教わった』</li>
+                                <li>『夢と金が9割』</li>
+                                <li>『コミュニケーション大全』</li>
+                                <li>『プロ会社員』 他多数</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <span
+                                class="inline-block bg-red-900/30 text-red-400 text-xs px-2 py-1 border border-red-900/50 mr-2">熱量</span>
+                            <span
+                                class="inline-block bg-amber-900/30 text-amber-400 text-xs px-2 py-1 border border-amber-900/50 mr-2">変革</span>
+                            <span
+                                class="inline-block bg-stone-800 text-stone-400 text-xs px-2 py-1 border border-stone-700">プロ意識</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="voice" class="section voice">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h3 class="section-title">VOICE</h3>
-                    <p class="section-subtitle">お客様の声</p>
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Voice Section -->
+    <section class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-16">
+                <span
+                    class="text-amber-500 text-sm tracking-widest uppercase border border-amber-500/30 px-3 py-1">Voice</span>
+                <h2 class="text-3xl md:text-4xl font-zen font-bold mt-4 mb-2 text-white">お客様の声</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Voice 1 -->
+                <div class="bg-stone-900/50 border border-amber-900/30 p-6 lacquer-box relative">
+                    <div class="text-amber-600 mb-4"><i data-lucide="quote" class="w-8 h-8"></i></div>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">
+                        「仕事への向き合い方が180度変わりました。明日会社に行くのが楽しみで仕方ありません!自分が変われば周りも変わる、その意味がやっと分かりました。」
+                    </p>
+                    <p class="text-right text-xs text-stone-500 font-bold">30代 男性 会社員</p>
                 </div>
-                <div class="voice-grid">
-                    <div class="voice-card fade-in-up">
-                        <div class="voice-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="voice-content">
-                            「仕事への向き合い方が180度変わりました。明日会社に行くのが楽しみで仕方ありません！自分が変われば周りも変わる、その意味がやっと分かりました。」
+                <!-- Voice 2 -->
+                <div class="bg-stone-900/50 border border-amber-900/30 p-6 lacquer-box relative">
+                    <div class="text-amber-600 mb-4"><i data-lucide="quote" class="w-8 h-8"></i></div>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">
+                        「涙が止まりませんでした。リーダーとしてどうあるべきか、ずっと悩んでいましたが、鴨頭さんの言葉で迷いが消えました。部下にもこの熱量を伝えます!」
+                    </p>
+                    <p class="text-right text-xs text-stone-500 font-bold">40代 女性 管理職</p>
+                </div>
+                <!-- Voice 3 -->
+                <div class="bg-stone-900/50 border border-amber-900/30 p-6 lacquer-box relative">
+                    <div class="text-amber-600 mb-4"><i data-lucide="quote" class="w-8 h-8"></i></div>
+                    <p class="text-stone-300 text-sm leading-relaxed mb-4">
+                        「ただの講演会じゃない、ライブのような熱気でした。エネルギーを浴びて、自分の中に眠っていたやる気スイッチが完全にONになりました。」
+                    </p>
+                    <p class="text-right text-xs text-stone-500 font-bold">20代 男性 営業職</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Information Section -->
+    <section id="details" class="py-20 relative">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-zen font-bold text-gold-gradient">開催概要</h2>
+                <div class="w-12 h-1 bg-red-800 mx-auto mt-4"></div>
+            </div>
+
+            <!-- Styled Table -->
+            <div class="border border-amber-800/30 bg-stone-900/50 backdrop-blur lacquer-box">
+                <div class="grid grid-cols-1 md:grid-cols-[120px_1fr]">
+                    <!-- Row 1 -->
+                    <div
+                        class="bg-stone-950/80 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-amber-900/30 text-amber-500 font-bold tracking-widest">
+                        日時
+                    </div>
+                    <div class="p-6 border-b border-amber-900/30 flex flex-col justify-center">
+                        <p class="text-2xl font-bold text-white mb-1">2026年1月16日（金）</p>
+                        <p class="text-stone-400">
+                            <span class="inline-block bg-stone-800 px-2 py-0.5 text-xs mr-2 rounded">開場</span>17:15
+                            <span class="mx-2 text-stone-600">|</span>
+                            <span
+                                class="inline-block bg-red-900 px-2 py-0.5 text-xs mr-2 rounded text-white">開演</span>18:00
                         </p>
-                        <p class="voice-author">30代 男性 会社員</p>
                     </div>
-                    <div class="voice-card fade-in-up delay-1">
-                        <div class="voice-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="voice-content">
-                            「涙が止まりませんでした。リーダーとしてどうあるべきか、ずっと悩んでいましたが、鴨頭さんの言葉で迷いが消えました。部下にもこの熱量を伝えます！」
+
+                    <!-- Row 2 -->
+                    <div
+                        class="bg-stone-950/80 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-amber-900/30 text-amber-500 font-bold tracking-widest">
+                        会場
+                    </div>
+                    <div class="p-6 border-b border-amber-900/30 flex flex-col justify-center">
+                        <p class="text-xl font-bold text-white mb-1">中日美容専門学校 2号館 CSホール</p>
+                        <p class="text-stone-400 text-sm">
+                            〒450-0002 愛知県名古屋市中村区名駅4-1-11<br>
                         </p>
-                        <p class="voice-author">40代 女性 管理職</p>
                     </div>
-                    <div class="voice-card fade-in-up delay-2">
-                        <div class="voice-icon"><i class="fas fa-quote-left"></i></div>
-                        <p class="voice-content">
-                            「ただの講演会じゃない、ライブのような熱気でした。エネルギーを浴びて、自分の中に眠っていたやる気スイッチが完全にONになりました。」
-                        </p>
-                        <p class="voice-author">20代 男性 営業職</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="details" class="section details">
-            <div class="container">
-                <div class="section-header text-center">
-                    <h3 class="section-title">EVENT DETAILS</h3>
-                    <p class="section-subtitle">開催概要</p>
-                </div>
-                <div class="details-grid">
-                    <div class="detail-card fade-in-up">
-                        <div class="icon-box">
-                            <i class="far fa-calendar-alt"></i>
-                        </div>
-                        <h4>DATE</h4>
-                        <p class="detail-main">2026年1月16日(金)</p>
-                        <p class="detail-sub">開場 17:15 / 開演 18:00</p>
+                    <!-- Row 3 -->
+                    <div
+                        class="bg-stone-950/80 p-6 flex items-center justify-center md:border-r border-amber-900/30 text-amber-500 font-bold tracking-widest">
+                        アクセス
                     </div>
-                    <div class="detail-card fade-in-up delay-1">
-                        <div class="icon-box">
-                            <i class="fas fa-map-marker-alt"></i>
+                    <div class="p-6 flex flex-col justify-center">
+                        <div class="flex items-center text-white">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-2 text-red-500"></i>
+                            名古屋駅から徒歩10分
                         </div>
-                        <h4>VENUE</h4>
-                        <p class="detail-main">中日美容専門学校 2号館 CSホール</p>
-                        <p class="detail-sub">名古屋駅から徒歩10分</p>
+                        <p class="text-xs text-stone-500 mt-2">※公共交通機関のご利用をおすすめいたします。</p>
                     </div>
-                    <div class="detail-card fade-in-up delay-2">
-                        <div class="icon-box">
-                            <i class="fas fa-ticket-alt"></i>
-                        </div>
-                        <h4>TICKET</h4>
-                        <p class="detail-main">Check Info</p>
-                        <p class="detail-sub">詳細は公式サイトにてご確認ください</p>
-                    </div>
-                </div>
-                <div class="organizer-info text-center fade-in-up delay-3"
-                    style="margin-top: 60px; color: var(--text-muted);">
-                    <p>主催：鴨頭嘉人『プロ会社員』出版記念講演会 名古屋実行委員会</p>
                 </div>
             </div>
-        </section>
 
-        <section id="contact" class="section cta">
-            <div class="container cta-content text-center">
-                <h3 class="cta-title">熱狂の渦に飛び込め。</h3>
-                <p class="cta-desc">定員に達し次第、締め切りとさせていただきます。<br>お早めにお申し込みください。</p>
-                <a href="https://kamogashira.com/tours/" target="_blank" class="btn btn-gold btn-large">チケット情報を確認する</a>
-                <p class="cta-note">※外部サイトへ移動します</p>
-                <div style="margin-top: 20px;">
-                    <a href="https://www.facebook.com/share/17ui5KRT7g/?" target="_blank"
-                        style="color: #fff; text-decoration: underline; margin-right: 15px;">Facebookイベントページ 1</a>
-                    <a href="https://www.facebook.com/share/19nDKvZr5c/?" target="_blank"
-                        style="color: #fff; text-decoration: underline;">Facebookイベントページ 2</a>
-                </div>
+            <!-- Organizer Info -->
+            <div class="mt-8 text-center text-stone-500 text-sm">
+                <p>主催:鴨頭嘉人『プロ会社員』出版記念講演会 名古屋実行委員会</p>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">KAMO PUBLISHING</div>
-                <div class="footer-links">
-                    <a href="https://kamogashira.com/" target="_blank">公式サイト</a>
-                    <a href="https://kamo-books.com/" target="_blank">鴨ブックス</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.youtube.com/channel/UCq3Ct-r3-XbGxDiG7BGu2dQ" target="_blank"><i
-                            class="fab fa-youtube"></i></a>
-                    <a href="https://twitter.com/kamohappy" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/yoshihitokamogashira" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/kamogashirayoshihito/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
-                </div>
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Ticket / CTA Section -->
+    <section id="ticket" class="py-24 relative bg-gradient-to-b from-black/50 to-red-950/30">
+        <div class="container mx-auto px-4 max-w-4xl text-center relative z-10">
+            <h2 class="text-4xl md:text-5xl font-zen font-black text-white mb-8">
+                新年の決意を、<br>
+                <span class="text-gold-gradient">確かな行動へ。</span>
+            </h2>
+            <p class="text-stone-300 mb-12">
+                席数には限りがございます。<br>
+                最高の一年のスタートを、この場所から。
+            </p>
+
+            <div
+                class="lacquer-box p-1 bg-gradient-to-r from-amber-700 via-yellow-500 to-amber-700 rounded-lg max-w-md mx-auto transform hover:scale-105 transition-all duration-300">
+                <a href="coming-soon.html"
+                    class="block bg-red-800 hover:bg-red-700 text-white font-bold text-xl md:text-2xl py-6 px-8 rounded-md border border-red-500 shadow-inner flex items-center justify-center group">
+                    <span>チケットを申し込む</span>
+                    <i data-lucide="arrow-right"
+                        class="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform"></i>
+                </a>
             </div>
-            <p class="copyright">&copy; 2025 Tokyo Kamogashira Land. All Rights Reserved.</p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-amber-900/30 relative">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="text-2xl font-zen font-bold text-stone-600 mb-6">KAMO PUBLISHING</div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://kamogashira.com/" target="_blank"
+                    class="text-stone-500 hover:text-amber-500 transition">公式サイト</a>
+                <a href="https://kamo-books.com/" target="_blank"
+                    class="text-stone-500 hover:text-amber-500 transition">鴨ブックス</a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8 text-sm">
+                <a href="tokushoho.html"
+                    class="text-stone-500 hover:text-amber-500 transition">特定商取引法に基づく表記</a>
+                <a href="contact.html"
+                    class="text-stone-500 hover:text-amber-500 transition">お問い合わせ</a>
+            </div>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://www.youtube.com/channel/UCq3Ct-r3-XbGxDiG7BGu2dQ" target="_blank"
+                    class="text-stone-500 hover:text-red-500 transition"><i data-lucide="youtube"
+                        class="w-6 h-6"></i></a>
+                <a href="https://twitter.com/kamohappy" target="_blank"
+                    class="text-stone-500 hover:text-blue-400 transition"><i data-lucide="twitter"
+                        class="w-6 h-6"></i></a>
+                <a href="https://www.facebook.com/yoshihitokamogashira" target="_blank"
+                    class="text-stone-500 hover:text-blue-600 transition"><i data-lucide="facebook"
+                        class="w-6 h-6"></i></a>
+                <a href="https://www.instagram.com/kamogashirayoshihito/" target="_blank"
+                    class="text-stone-500 hover:text-pink-500 transition"><i data-lucide="instagram"
+                        class="w-6 h-6"></i></a>
+            </div>
+            <p class="text-stone-700 text-sm">
+                &copy; 2026 Tokyo Kamogashira Land. All Rights Reserved.
+            </p>
         </div>
     </footer>
 
     <script>
-        // Simple scroll animation
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+        // 金色パーティクルを生成
+        function createParticles() {
+            const particleCount = 50; // パーティクルの数
+            const body = document.body;
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
 
-            document.querySelectorAll('.fade-in-up, .reveal-left, .reveal-right').forEach(el => {
-                observer.observe(el);
-            });
+                // ランダムな位置
+                const left = Math.random() * 100;
+                particle.style.left = `${left}%`;
+
+                // ランダムなサイズ (2-4px)
+                const size = 2 + Math.random() * 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // ランダムな落下速度 (8-15秒)
+                const duration = 8 + Math.random() * 7;
+                particle.style.animationDuration = `${duration}s`;
+
+                // ランダムな遅延
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+
+                // ランダムな横移動
+                const drift = -30 + Math.random() * 60;
+                particle.style.setProperty('--drift', `${drift}px`);
+
+                body.appendChild(particle);
+            }
+            console.log(`${particleCount}個のパーティクルを生成しました`);
+        }
+
+        // ページ読み込み時に実行
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('パーティクルを生成中...');
+            createParticles();
+
+            // Lucide Iconsを初期化
+            try {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                    console.log('Lucideアイコンを初期化しました');
+                }
+            } catch (e) {
+                console.warn('Lucide初期化エラー:', e);
+            }
         });
+    </script>
     </script>
 </body>
 
