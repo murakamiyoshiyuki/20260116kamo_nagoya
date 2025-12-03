@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お申し込みありがとうございます | 鴨頭嘉人『プロ会社員』出版記念講演会</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;700;800&family=Zen+Old+Mincho:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Shippori Mincho', serif;
+            background-color: #0a0a0a;
+            /* 市松模様の背景 */
+            background-image:
+                linear-gradient(45deg, #1a1a1a 25%, transparent 25%),
+                linear-gradient(-45deg, #1a1a1a 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #1a1a1a 75%),
+                linear-gradient(-45deg, transparent 75%, #1a1a1a 75%);
+            background-size: 160px 160px;
+            background-position: 0 0, 0 80px, 80px -80px, -80px 0px;
+            position: relative;
+        }
+
+        /* 左右の黒グラデーションオーバーレイ */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.6) 0%,
+                    rgba(0, 0, 0, 0.3) 8%,
+                    transparent 20%,
+                    transparent 80%,
+                    rgba(0, 0, 0, 0.3) 92%,
+                    rgba(0, 0, 0, 0.6) 100%),
+                radial-gradient(circle at 20% 30%, rgba(191, 149, 63, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(252, 246, 186, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* 金色パーティクルのアニメーション */
+        @keyframes fall {
+            0% {
+                transform: translateY(-100vh) translateX(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) translateX(var(--drift, 0));
+                opacity: 0;
+            }
+        }
+
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: radial-gradient(circle, rgba(252, 246, 186, 1), rgba(191, 149, 63, 0.8));
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            animation: fall linear infinite;
+            box-shadow: 0 0 6px rgba(252, 246, 186, 1), 0 0 10px rgba(191, 149, 63, 0.5);
+        }
+
+        .font-zen {
+            font-family: 'Zen Old Mincho', serif;
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .lacquer-box {
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(180, 83, 9, 0.3) inset;
+        }
+
+        /* チェックマークアニメーション */
+        @keyframes checkmark {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1.2) rotate(180deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(360deg);
+                opacity: 1;
+            }
+        }
+
+        .checkmark-animation {
+            animation: checkmark 0.8s ease-out forwards;
+        }
+
+        /* フェードインアニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* コンテンツのz-index調整 */
+        main {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body class="text-stone-200">
+
+    <main class="min-h-screen flex items-center justify-center px-4 py-12">
+        <div class="container mx-auto max-w-3xl">
+
+            <!-- Success Icon -->
+            <div class="text-center mb-8 checkmark-animation">
+                <div
+                    class="w-24 h-24 mx-auto bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center shadow-2xl border-4 border-green-500">
+                    <i data-lucide="check" class="w-14 h-14 text-white" stroke-width="3"></i>
+                </div>
+            </div>
+
+            <!-- Main Content Box -->
+            <div class="lacquer-box border border-amber-900/30 bg-black/80 backdrop-blur-lg p-8 md:p-12 relative fade-in-up"
+                style="animation-delay: 0.2s; opacity: 0;">
+
+                <!-- Decorative Corners -->
+                <div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-amber-500"></div>
+                <div class="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-amber-500"></div>
+                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-amber-500"></div>
+                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-amber-500"></div>
+
+                <!-- Title -->
+                <h1 class="text-3xl md:text-5xl font-zen font-black text-center mb-6">
+                    <span class="text-gold-gradient">お申し込み</span><br>
+                    <span class="text-white">ありがとうございます</span>
+                </h1>
+
+                <!-- Divider -->
+                <div class="w-16 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mb-8"></div>
+
+                <!-- Success Message -->
+                <div class="text-center mb-10">
+                    <p class="text-lg md:text-xl text-stone-300 leading-relaxed">
+                        鴨頭嘉人『プロ会社員』出版記念講演会へのお申し込みが<br class="hidden md:block">
+                        <span class="text-amber-400 font-bold">正常に完了いたしました。</span>
+                    </p>
+                </div>
+
+                <!-- Email Confirmation Section -->
+                <div class="bg-stone-900/60 border border-amber-900/30 p-6 md:p-8 mb-8 rounded-lg">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <i data-lucide="mail" class="w-6 h-6 text-amber-500"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-xl font-bold text-white mb-3 font-zen">ご登録のメールをご確認ください</h2>
+                            <p class="text-stone-300 text-sm md:text-base leading-relaxed mb-4">
+                                ご登録いただいたメールアドレス宛に、<span class="text-amber-400 font-bold">確認メールを送信いたしました。</span><br>
+                                メールが届かない場合は、迷惑メールフォルダもご確認ください。
+                            </p>
+                            <div
+                                class="bg-stone-950/80 border border-stone-700 p-4 rounded text-xs md:text-sm text-stone-400">
+                                <p class="mb-2"><strong class="text-amber-500">メールに記載されている内容:</strong></p>
+                                <ul class="list-disc list-inside space-y-1 ml-2">
+                                    <li>お申し込み内容の詳細</li>
+                                    <li>決済情報の確認</li>
+                                    <li>当日のご案内</li>
+                                    <li>お問い合わせ先</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Day Information Section -->
+                <div
+                    class="bg-gradient-to-br from-red-950/40 to-stone-900/40 border border-red-900/30 p-6 md:p-8 rounded-lg mb-8">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 mt-1">
+                            <i data-lucide="calendar-check" class="w-6 h-6 text-red-400"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h2 class="text-xl font-bold text-white mb-4 font-zen">当日のご案内</h2>
+
+                            <!-- Event Details -->
+                            <div class="space-y-4 text-sm md:text-base">
+                                <!-- Date & Time -->
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="clock" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                                    <div>
+                                        <p class="text-white font-bold mb-1">開催日時</p>
+                                        <p class="text-stone-300">2026年1月16日（金）</p>
+                                        <p class="text-stone-400 text-sm">
+                                            <span
+                                                class="inline-block bg-stone-800 px-2 py-0.5 rounded mr-2">開場</span>17:15
+                                            <span class="mx-2">|</span>
+                                            <span
+                                                class="inline-block bg-red-900 px-2 py-0.5 rounded mr-2 text-white">開演</span>18:00
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Venue -->
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                                    <div>
+                                        <p class="text-white font-bold mb-1">会場</p>
+                                        <p class="text-stone-300">中日美容専門学校 2号館 CSホール</p>
+                                        <p class="text-stone-400 text-sm">〒450-0002 愛知県名古屋市中村区名駅4-1-11</p>
+                                        <p class="text-amber-400 text-sm mt-1">📍 名古屋駅から徒歩10分</p>
+                                    </div>
+                                </div>
+
+                                <!-- Important Notes -->
+                                <div class="flex items-start gap-3">
+                                    <i data-lucide="info" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                                    <div>
+                                        <p class="text-white font-bold mb-2">当日のご注意</p>
+                                        <ul class="text-stone-300 space-y-1 text-sm">
+                                            <li>• 開場時間の<strong class="text-amber-400">17:15</strong>以降にお越しください</li>
+                                            <li>• 受付にて<strong class="text-amber-400">確認メールまたはQRコード</strong>をご提示ください</li>
+                                            <li>• 公共交通機関のご利用をおすすめいたします</li>
+                                            <li>• お席は<strong class="text-amber-400">自由席</strong>となります</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="bg-stone-950/60 border border-stone-700 p-6 rounded-lg mb-8">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="help-circle" class="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                        <div class="flex-1">
+                            <p class="text-white font-bold mb-2">お問い合わせ</p>
+                            <p class="text-stone-300 text-sm mb-3">
+                                ご不明な点がございましたら、お気軽にお問い合わせください。
+                            </p>
+                            <a href="contact.html"
+                                class="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition text-sm font-bold">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                お問い合わせフォームへ
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thank You Message -->
+                <div class="text-center pt-6 border-t border-amber-900/30">
+                    <p class="text-stone-400 text-sm md:text-base leading-relaxed mb-4">
+                        2026年、最高のスタートを切る準備が整いました。<br>
+                        当日、会場でお会いできることを楽しみにしております。
+                    </p>
+                    <p class="text-amber-500 font-zen font-bold text-lg">
+                        ありがとうございました
+                    </p>
+                </div>
+
+                <!-- Back to Home Button -->
+                <div class="text-center mt-10">
+                    <a href="index.html"
+                        class="inline-flex items-center gap-2 border-2 border-amber-900/50 hover:border-amber-500 bg-stone-900/50 hover:bg-stone-800/50 text-stone-300 hover:text-white font-bold px-8 py-3 rounded-lg transition-all duration-300">
+                        <i data-lucide="home" class="w-5 h-5"></i>
+                        トップページに戻る
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Organizer Info -->
+            <div class="text-center mt-8 text-stone-500 text-sm fade-in-up" style="animation-delay: 0.4s; opacity: 0;">
+                <p>主催:鴨頭嘉人『プロ会社員』出版記念講演会 名古屋実行委員会</p>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // 金色パーティクルを生成
+        function createParticles() {
+            const particleCount = 30; // パーティクルの数（控えめに）
+            const body = document.body;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+
+                // ランダムな位置
+                const left = Math.random() * 100;
+                particle.style.left = `${left}%`;
+
+                // ランダムなサイズ (2-4px)
+                const size = 2 + Math.random() * 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+
+                // ランダムな落下速度 (8-15秒)
+                const duration = 8 + Math.random() * 7;
+                particle.style.animationDuration = `${duration}s`;
+
+                // ランダムな遅延
+                const delay = Math.random() * 5;
+                particle.style.animationDelay = `${delay}s`;
+
+                // ランダムな横移動
+                const drift = -30 + Math.random() * 60;
+                particle.style.setProperty('--drift', `${drift}px`);
+
+                body.appendChild(particle);
+            }
+        }
+
+        // ページ読み込み時に実行
+        document.addEventListener('DOMContentLoaded', function () {
+            createParticles();
+
+            // Lucide Iconsを初期化
+            try {
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            } catch (e) {
+                console.warn('Lucide初期化エラー:', e);
+            }
+        });
+    </script>
+</body>
+
+</html>
