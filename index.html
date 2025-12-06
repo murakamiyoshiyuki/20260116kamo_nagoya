@@ -253,7 +253,7 @@
                 <a href="#details" class="text-stone-400 hover:text-amber-500 transition">開催概要</a>
                 <a href="#ticket" class="text-stone-400 hover:text-amber-500 transition">チケット</a>
             </div>
-            <a href="https://buy.stripe.com/5kQdR9eN02sDga99YW5sA02"
+            <a href="#ticket"
                 class="bg-red-800 hover:bg-red-700 text-white text-sm px-4 py-2 rounded transition shadow-lg">
                 申し込む
             </a>
@@ -306,7 +306,7 @@
 
                 <!-- CTA Button -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://buy.stripe.com/5kQdR9eN02sDga99YW5sA02"
+                    <a href="#ticket"
                         class="lacquer-box bg-gradient-to-r from-red-900 to-red-700 hover:from-red-800 hover:to-red-600 text-white font-bold text-lg px-10 py-4 rounded-lg shadow-2xl transform hover:scale-105 transition-all duration-300 border border-red-500">
                         今すぐチケットを申し込む
                     </a>
@@ -595,17 +595,75 @@
                     席数には限りがございます。<br>
                     最高の一年のスタートを、この場所から。
                 </p>
+                <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto text-left">
+                    <!-- A席 -->
+                    <div
+                        class="lacquer-box bg-stone-900/80 border border-amber-900/50 p-6 rounded-lg flex flex-col h-full transform hover:scale-105 transition-all duration-300">
+                        <h3 class="text-xl font-bold text-white mb-2">A席<span
+                                class="text-sm font-normal block text-stone-400 mt-1">（A席エリア内自由席）</span></h3>
+                        <p class="text-xs text-red-400 mb-4">※書籍はつきません</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-zen font-bold text-gold-gradient mb-6">¥4,000</p>
+                            <a href="https://buy.stripe.com/5kQdR9eN02sDga99YW5sA02"
+                                class="block w-full bg-red-800 hover:bg-red-700 text-white font-bold py-3 rounded border border-red-500 transition shadow-lg text-center">
+                                申し込む
+                            </a>
+                        </div>
+                    </div>
 
-                <div
-                    class="lacquer-box p-1 bg-gradient-to-r from-amber-700 via-yellow-500 to-amber-700 rounded-lg max-w-md mx-auto transform hover:scale-105 transition-all duration-300">
-                    <a href="https://buy.stripe.com/5kQdR9eN02sDga99YW5sA02"
-                        class="block bg-red-800 hover:bg-red-700 text-white font-bold text-xl md:text-2xl py-6 px-8 rounded-md border border-red-500 shadow-inner flex items-center justify-center group">
-                        <span>チケットを申し込む</span>
-                        <i data-lucide="arrow-right"
-                            class="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform"></i>
-                    </a>
+                    <!-- A席 ペア割引 -->
+                    <div
+                        class="lacquer-box bg-stone-900/80 border border-amber-900/50 p-6 rounded-lg flex flex-col h-full transform hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute -top-3 -right-3 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full transform rotate-12 shadow-lg">
+                            お得なペア割</div>
+                        <h3 class="text-xl font-bold text-white mb-2">【A席 ペア割引】2名<span
+                                class="text-sm font-normal block text-stone-400 mt-1">（A席エリア内自由席）</span></h3>
+                        <p class="text-xs text-red-400 mb-4">※書籍はつきません</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-zen font-bold text-gold-gradient mb-6">¥7,000</p>
+                            <a href="https://buy.stripe.com/3cI14n9sG8R1cXXb305sA03"
+                                class="block w-full bg-red-800 hover:bg-red-700 text-white font-bold py-3 rounded border border-red-500 transition shadow-lg text-center">
+                                申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- A席 団体席 -->
+                    <div
+                        class="lacquer-box bg-stone-900/80 border border-amber-900/50 p-6 rounded-lg flex flex-col h-full transform hover:scale-105 transition-all duration-300 relative">
+                        <div
+                            class="absolute -top-3 -right-3 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full transform rotate-12 shadow-lg">
+                            4名様セット</div>
+                        <h3 class="text-xl font-bold text-white mb-2">【A席 団体席】4名<span
+                                class="text-sm font-normal block text-stone-400 mt-1">（A席エリア内自由席）</span></h3>
+                        <p class="text-xs text-red-400 mb-4">※書籍はつきません</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-zen font-bold text-gold-gradient mb-6">¥14,000</p>
+                            <a href="https://buy.stripe.com/8x2eVdawK2sD6zz1sq5sA04"
+                                class="block w-full bg-red-800 hover:bg-red-700 text-white font-bold py-3 rounded border border-red-500 transition shadow-lg text-center">
+                                申し込む
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 書籍付き -->
+                    <div
+                        class="lacquer-box bg-gradient-to-br from-stone-900 to-stone-800 border border-amber-500/50 p-6 rounded-lg flex flex-col h-full transform hover:scale-105 transition-all duration-300 relative overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-300 via-yellow-500 to-amber-300">
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">【書籍】Voicyで鴨さんが名前を読み上げる権</h3>
+                        <p class="text-xs text-amber-400 mb-4">※書籍15冊郵送</p>
+                        <div class="mt-auto">
+                            <p class="text-3xl font-zen font-bold text-gold-gradient mb-6">¥30,000</p>
+                            <a href="https://buy.stripe.com/3cIaEX6gu0kv9LL7QO5sA05"
+                                class="block w-full bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-black font-bold py-3 rounded border border-amber-300 transition shadow-lg text-center">
+                                申し込む
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </section>
     </main>
