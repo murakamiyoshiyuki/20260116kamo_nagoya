@@ -36,6 +36,14 @@
         // ボタンクリックを計測する関数
         function trackTicketClick() {
             console.log('Ticket button clicked');
+            // GA4 Begin Checkout
+            if (typeof gtag === 'function') {
+                gtag('event', 'begin_checkout', {
+                    'event_category': 'engagement',
+                    'event_label': 'ticket_button'
+                });
+            }
+            // Meta Pixel Initiate Checkout
             if (typeof fbq === 'function') {
                 fbq('track', 'InitiateCheckout');
             }
