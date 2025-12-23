@@ -17,7 +17,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -48,6 +48,19 @@
                 fbq('track', 'InitiateCheckout');
             }
         }
+
+        // URLパラメータ（UTMなど）をStripeリンクに引き継ぐ処理
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = window.location.search;
+            if (params) {
+                const stripeLinks = document.querySelectorAll('a[href^="https://buy.stripe.com/"]');
+                stripeLinks.forEach(link => {
+                    const separator = link.href.includes('?') ? '&' : '?';
+                    // 既存のパラメータと重複しないように単純結合（Stripeは余分なパラメータを無視する傾向があるため安全）
+                    link.href = link.href + separator + params.substring(1);
+                });
+            }
+        });
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
